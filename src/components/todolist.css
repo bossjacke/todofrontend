@@ -1,0 +1,229 @@
+/* todolist.css */
+
+/* Container for the list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Individual todo item */
+.item {
+  background-color: #f9f9f9;
+  border-left: 5px solid #4caf50;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Content section */
+.content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.content p {
+  margin: 0.5rem 0 0;
+  color: #666;
+}
+
+/* Action buttons */
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit {
+  background-color: #2196f3;
+  color: white;
+}
+.save {
+  background-color: #05d421;
+  color: rgb(0, 0, 0);
+}
+.save:hover{
+  background-color: #05d421;
+}
+
+.edit:hover {
+  background-color: #1976d2;
+}
+.cancel {
+  background-color: #f70505;
+  color: rgb(0, 0, 0);
+}
+.cancel:hover{
+  background-color: #f70505;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #d32f2f;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 2rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* homepage */
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  animation: pulseRun 1.2s ease-in-out infinite;
+  position: relative;
+}
+
+/* Optional glowing underline */
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  animation: glowLine 2s linear infinite;
+}
+
+/* Keyframes for pulsing "run" effect */
+@keyframes pulseRun {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(3px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateX(-3px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(2px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Glowing underline animation */
+@keyframes glowLine {
+  0% {
+    box-shadow: 0 0 5px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 15px #9333ea;
+  }
+  100% {
+    box-shadow: 0 0 5px #3b82f6;
+  }
+}
+
+/*  */
+.todoform {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0f4ff, #dbeafe);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.todoform:hover {
+  transform: scale(1.02);
+}
+
+.todoform input {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.todoform input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.todoform button {
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todoform button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
