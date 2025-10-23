@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = "http://localhost:3000"; // your backend URL
+const API_URL = "http://localhost:3001"; // your backend URL
 
 // GET all todos
  const getAllTodos = () => axios.get(`${API_URL}/todos`);
